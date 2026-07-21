@@ -1,6 +1,15 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav a');
+const brand = document.querySelector('.brand');
+
+const scrollToStart = (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.replaceState(null, '', '#inicio');
+};
+
+brand.addEventListener('click', scrollToStart);
 
 menuToggle.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
@@ -13,9 +22,7 @@ navLinks.forEach(link => {
     menuToggle.setAttribute('aria-expanded', 'false');
 
     if (link.getAttribute('href') === '#inicio') {
-      event.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      history.replaceState(null, '', '#inicio');
+      scrollToStart(event);
     }
   });
 });
