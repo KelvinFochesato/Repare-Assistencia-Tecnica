@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Repare+ Assistência Técnica - manutenção de celulares, computadores, notebooks e eletrônicos em Eusébio, Fortaleza e região." />
   <title>Repare+ Assistência Técnica</title>
+  <link rel="icon" type="image/png" href="assets/logo-repare-plus-novo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -207,7 +208,7 @@
             </div>
             <div class="field">
               <label for="telefone">Telefone</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+              <input type="tel" id="telefone" name="telefone" placeholder="Digite apenas números" inputmode="numeric" maxlength="13" pattern="[0-9]{1,13}" required />
             </div>
           </div>
 
@@ -230,6 +231,21 @@
           <button type="submit" class="btn btn-primary btn-full">Enviar solicitação</button>
           <p class="form-status" id="formStatus" role="status"></p>
         </form>
+
+        <div class="location-map reveal">
+          <div class="location-map-heading">
+            <span class="eyebrow">Localização</span>
+            <h2>Encontre a Repare+</h2>
+            <p>Bairro Amador, Eusébio, Ceará</p>
+          </div>
+          <iframe
+            src="https://www.google.com/maps?q=Bairro%20Amador%2C%20Eus%C3%A9bio%2C%20Cear%C3%A1&amp;output=embed"
+            title="Mapa da localização da Repare Plus"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
     </section>
   </main>

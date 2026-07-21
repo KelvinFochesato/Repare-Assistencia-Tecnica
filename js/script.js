@@ -46,6 +46,11 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
+const telefoneInput = document.getElementById('telefone');
+
+telefoneInput.addEventListener('input', () => {
+  telefoneInput.value = telefoneInput.value.replace(/\D/g, '').slice(0, 13);
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
